@@ -1,13 +1,76 @@
 @import "~normalize.css";
-
 @import "_variables";
-@import "modules/hello.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 
 body {
-  background: $wtf;
-  color: #fff;
+  background-color: #3767AD;
+  color: white;
+  height: 100vh;
+}
+
+.content {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  flex-direction: column;
+  font-family: Roboto;
+  font-weight: 500;
+  font-style: normal;
+
+  &__header {
+    margin: 87px 0 68px 0;
+    font-size: 55px;
+    line-height: 64px;
+  }
+
+  &__image {
+    width: 280px;
+    height: 280px;
+    margin: 0 0 48px 0;
+  }
+
+  &__number {
+    margin: 0 0;
+    top: 317px;
+    font-size: 112px;
+    line-height: 131px;
+    position: absolute;
+    color: #000;
+    z-index: 1;
+  }
+}
+
+.button--add {
+  margin: 0 0 37px 0;
+  font-size: 18px;
+  line-height: 21px;
+  width: 216px;
+  height: 47px;
+  padding: 11px 32px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button--sub {
+  color: #F5E5E7;
+  font-size: 14px;
+  line-height: 16px;
+  width: 120px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
