@@ -8,8 +8,8 @@ const add = document.querySelector('.add--js');
 const sub = document.querySelector('.sub--js');
 const key = new Date().toISOString().slice(0,10)
 let glass;
-if (localStorage.getItem(`${key}`)) {
-    glass = localStorage.getItem(`${key}`)
+if (localStorage.getItem(key)) {
+    glass = localStorage.getItem(key)
     number.innerHTML = glass
 } else {
     glass = 0
@@ -18,7 +18,7 @@ if (localStorage.getItem(`${key}`)) {
 
 add.addEventListener('click', (e) => {
     e.preventDefault();
-    glass = glass + 1
+    glass++
     localStorage.setItem(key, glass)
     number.innerHTML = localStorage.getItem(key)
 })
@@ -26,7 +26,7 @@ add.addEventListener('click', (e) => {
 sub.addEventListener('click', (e) => {
     e.preventDefault();
     if (glass > 0) {
-        glass = glass - 1
+        glass--
         localStorage.setItem(key, glass)
         number.innerHTML = localStorage.getItem(key)
     }
